@@ -1,0 +1,48 @@
+services:
+  smartdoor:
+    depends_on:
+      - smartdoor_mysql
+    container_name: smartdoor
+    restart: unless-stopped
+    build:
+      context: docker/dev
+    volumes:
+      - ./app:/var/www/html/
+      - ./app/.env.docker:/var/www/html/.env
+    ports:
+      - "8016:80"
+    networks:
+      - smartdoor
+
+  smartdoor_mysql:
+    container_name: smartdoor_mysql
+    restart: unless-stopped
+    image: mysql:8.0.41
+    environment:
+      MYSQL_ROOT_PASSWORD: "smartdoor123!"
+      MYSQL_ROOT_HOSTS: "%"
+      MYSQL_DATABASE: "smartdoor"
+      MYSQL_USER: "smartdoor"
+      MYSQL_PASSWORD: "smartdoor123!"
+    ports:
+      - "3308:3306"
+    networks:
+      - smartdoor
+
+  smartdoor_redis:
+    container_name: smartdoor_redis
+    image: redis:latest
+    restart: unless-stopped
+    ports:
+      - "6380:6379"
+    volumes:
+      - smartdoor_redis_vol:/data
+    networks:
+      - smartdoor
+
+volumes:
+  smartdoor_redis_vol:
+
+networks:
+  smartdoor:
+    external: true

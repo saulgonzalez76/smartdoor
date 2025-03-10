@@ -1,0 +1,13 @@
+{
+    "require": {
+        "phpmailer/phpmailer": "^6.4",
+        "chillerlan/php-qrcode": "^4.3",
+        "ext-gd": "^7.4",
+        "ext-zlib": "*",
+        "phpfastcache/phpfastcache": "^8.1",
+        "vlucas/phpdotenv": "^5.5",
+        "sentry/sdk": "^3.5",
+        "sentry/sentry": "^3.22",
+        "jwt/php-jwt": "^5.3"
+    }
+}

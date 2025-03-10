@@ -1,0 +1,56 @@
+#thumbvideoyoutube {
+    width: 800px;
+	height: 85px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-right: 5px;
+    padding-left: 5px;
+	background-color: #ffffff;
+	border: 1px solid #ffffff;
+	overflow-y:hidden;
+	overflow-x:auto;
+	}
+
+#usuarioyoutube {
+    width: 800px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-right: 5px;
+    padding-left: 5px;
+	background-color: #ffc;
+	border: 1px solid #f2e389;
+	text-align:left;
+	font:Arial, Helvetica, sans-serif;
+	text-shadow:#999999;
+	font-size:18px;
+	font-weight:600;
+	}
+
+#descyoutube {
+    width: 800px;
+	height: 70px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-right: 5px;
+    padding-left: 5px;
+	background-color: #ffc;
+	border: 1px solid #f2e389;
+	text-align:left;
+	font:Arial, Helvetica, sans-serif;
+	text-shadow:#999999;
+	font-size:10px;
+	font-weight:600;
+	overflow-y:auto;
+	overflow-x:auto;
+	}
+	
+#videoyoutube {
+    width: 800px;
+	height: 600px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-right: 5px;
+    padding-left: 5px;
+	background-color: #000000;
+	border: 1px solid #f2e389;
+	}

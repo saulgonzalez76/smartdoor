@@ -1,0 +1,19 @@
+<?php
+
+/* VARIABLES GENERALES DEL SISTEMA */
+if(!isset($_SESSION)) { session_start(); }
+include($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php');
+$dotenv = Dotenv\Dotenv::createImmutable($_SERVER['DOCUMENT_ROOT']);
+$dotenv->load();
+
+$_SESSION['DB_HOST'] = $_ENV['DB_HOST'];
+$_SESSION['DB_DATABASE'] = $_ENV['DB_DATABASE'];
+$_SESSION['DB_USERNAME'] = $_ENV['DB_USERNAME'];
+$_SESSION['DB_PASSWORD'] = $_ENV['DB_PASSWORD'];
+$_SESSION['PAYPAL_API_CLIENT_ID'] = $_ENV['PAYPAL_API_CLIENT_ID'];
+$_SESSION['PAYPAL_API_SECRET'] = $_ENV['PAYPAL_API_SECRET'];
+$_SESSION['WEBPAGE_TITLE'] = $_ENV['WEBPAGE_TITLE'];
+$_SESSION['WEBPAGE_TIMEOUT'] = $_ENV['WEBPAGE_TIMEOUT'];
+
+
+?>
